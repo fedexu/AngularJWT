@@ -1,9 +1,11 @@
 {
   "name": "angular-login",
   "version": "0.0.0",
+  "git": "https://github.com/fedexu/AngularLoginWithJWT.git",
+  "author": "Federico Peruzzi",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4201",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
