@@ -33,11 +33,42 @@ export class LoginViewComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
+    }, {
+      validator: this.pattern('username', 'password')
     });
 
     // get return url from route parameters or default to '/private'
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/private';
   }
+
+  pattern(username, password) {
+    return (formGroup: FormGroup) => {
+      const usr = formGroup.controls[username];
+      const pwd = formGroup.controls[password];
+
+      if ((usr.errors && !usr.errors.invalid) || (pwd.errors && !pwd.errors.invalid) ) {
+        // return if another validator has already found an error on the matchingControl
+        return;
+      }
+
+      // set error on matchingControl if validation fails
+      if (this.matchValue(usr.value as string)) {
+        usr.setErrors({ invalid: true });
+      } else {
+        usr.setErrors(null);
+      }
+      if (this.matchValue(pwd.value as string)) {
+        pwd.setErrors({ invalid: true });
+      } else {
+        pwd.setErrors(null);
+      }
+    }
+  }
+
+  matchValue(str:string){
+    return str.includes("\\") || str.includes('/') || str.includes('^') || str.includes(',') || str.includes('.') 
+  }
+
 
   // convenience getter for easy access to form fields
   get f() { return this.loginForm.controls; }

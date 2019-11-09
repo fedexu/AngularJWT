@@ -5,7 +5,7 @@
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" formControlName="username" class="form-control"
-                        [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                        [ngClass]="{ 'is-invalid': submitted && f.username.errors }" (ngModelChange)="pattern($event, f.username.value)"/>
                     <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
                         <div *ngIf="f.username.errors.required">Username is required</div>
                     </div>
