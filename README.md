@@ -2,11 +2,10 @@
   <a target="blank"><img src="https://angular.io/assets/images/logos/angular/angular_solidBlack.png" width="320" alt="Angular Logo" /></a>
 </p>
 
-
 ## Description
 
-A simple Angular 8 application with login / logout feature based on JWT token. 
-For back-end see https://github.com/fedexu/NestJsMicroservicesBlank .
+A simple Angular 8 application with login / logout feature based on JWT token.
+For a back-end wrote in NestJS to work with JWT see : <a href="https://github.com/fedexu/NestJsJWT" name="NestJsJWT">
 
 ## Installation
 

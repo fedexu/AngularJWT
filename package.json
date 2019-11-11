@@ -1,8 +1,9 @@
 {
-  "name": "angular-login",
+  "name": "angular-jwt",
   "version": "0.0.0",
-  "git": "https://github.com/fedexu/AngularLoginWithJWT.git",
+  "git": "https://github.com/fedexu/AngularJWT.git",
   "author": "Federico Peruzzi",
+  "license": "GNU3.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
