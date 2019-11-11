@@ -5,7 +5,7 @@
 ## Description
 
 A simple Angular 8 application with login / logout feature based on JWT token.
-For a back-end wrote in NestJS to work with JWT see : <a href="https://github.com/fedexu/NestJsJWT" name="NestJsJWT">
+For a back-end wrote in NestJS to work with JWT see : <a href="https://github.com/fedexu/NestJsJWT" >NestJsJWT</a>
 
 ## Installation
 
